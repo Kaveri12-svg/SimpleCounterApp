@@ -1,34 +1,35 @@
-import { useState } from "react"
-import './App.css';
+import { useState } from 'react'
+import './CounterApp.css'
 
-//to store initial and upadted values
 const CounterApp = () => {
-    const [counter, setCounter] = useState(0)
+    const [count, setCount] = useState(0)
 
-// Handle increment
-const HandleIncrement = () => {
-    setCounter(counter + 1)
- }
+    const handleIncrement = () => {
+        setCount(prev => prev + 1)
+    }
 
- // Handle decrement
-const HandleDecrement = () => {
-    setCounter(counter - 1)
-}
+    const handleDecrement = () => {
+        if(count <= 0) {
+            setCount(0)
+        } else {
+        setCount(prev => prev - 1)
+        }
+    }
 
-//handle reset
-const HandleReset = () => {
-    setCounter(0)
-}
-return (
-    <div>
-        <h2>{counter} Times You have Clicked me!</h2>
-        <div >
-        <button onClick={HandleIncrement} className="button1">Increment</button>
-        <button onClick={HandleDecrement} className="button2">decrement</button>
-        <button onClick={HandleReset} className="button3">reset</button>
+    const handleReset = () => {
+        setCount(0)
+    }
+    return (
+        <div className='Parent'>
+            <h2>Counter App</h2>
+            <h5>You have clicked me {count} times</h5>
+            <div>
+              <button onClick={handleIncrement}>Increment</button>
+              <button onClick={handleDecrement}>Decerement</button>
+              <button onClick={handleReset}>Reset</button>
+            </div>
         </div>
-    </div>
-)
+    )
 }
 
 export default CounterApp;

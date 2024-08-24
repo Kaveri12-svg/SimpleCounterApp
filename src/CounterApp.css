@@ -1,0 +1,27 @@
+.Parent {
+    text-align: center;
+   /* display: flex;
+   align-items: center;
+   justify-content: center; */
+   /* background-color: azure; */
+}
+
+button {
+    background-color: aquamarine;
+    padding: 10px 10px;
+    border-radius: 12px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+button:active {
+    background-color: bisque;
+}
+
+button:disabled {
+background-color: azure;
+}

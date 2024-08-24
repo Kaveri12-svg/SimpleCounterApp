@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import CounterApp from './CounterApp';
+import React from "react";
+import CounterApp from "./CounterApp";
 
-function App() {
-  return (
-    <div className="App">
+const App = () =>{
+
+  return(
+    <div>
       <CounterApp/>
     </div>
-  );
+  )
 }
-
 export default App;
